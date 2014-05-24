@@ -4,7 +4,8 @@
   "description": "Patient Consent Management System",
   "main": "index.js",
   "dependencies": {
-    "grunt": "~0.4.5"
+    "grunt": "~0.4.5",
+    "grunt-contrib-requirejs": "~0.4.4"
   },
   "devDependencies": {},
   "scripts": {
