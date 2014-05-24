@@ -1,7 +1,3 @@
-define([
-    'application'
-], function(App){
-
-    App.start();
-    
+require(['angular', 'app', 'controllers/consent'], function (angular) {
+    angular.bootstrap(document, ['consent']);
 });
