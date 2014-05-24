@@ -16,6 +16,7 @@
   "dependencies": {
     "requirejs": "~2.1.11",
     "modernizr": "~2.8.2",
-    "angular": "~1.2.16"
+    "angular": "~1.2.16",
+    "angular-route": "~1.2.16"
   }
 }

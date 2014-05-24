@@ -1,0 +1,5 @@
+<ul id="search-results">
+    <li ng-repeat="procedure in procedures">
+        <a ng-class="{selected: location.path() == '/procedure/{{procedure.name}}'}" href="#/procedure/{{procedure.name}}">{{procedure.name}}</a>
+    </li>
+</ul>
