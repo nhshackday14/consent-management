@@ -1,0 +1,23 @@
+{
+  "name": "consent-management",
+  "version": "0.0.0",
+  "description": "Patient Consent Management System",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "~0.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nhshackday14/consent-management.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nhshackday14/consent-management/issues"
+  },
+  "homepage": "https://github.com/nhshackday14/consent-management"
+}

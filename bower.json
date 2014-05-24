@@ -1,0 +1,16 @@
+{
+  "name": "consent-management",
+  "version": "0.0.0",
+  "homepage": "https://github.com/nhshackday14/consent-management",
+  "authors": [
+    "Lawrence Hunt <lawrence.hunt@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
