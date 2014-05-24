@@ -21,7 +21,7 @@ class ConsentForm(models.Model):
     )
 
 
-class Procedures(models.Model):
+class Procedure(models.Model):
     name = models.CharField(
         max_length=255, null=False, unique=True
     )
