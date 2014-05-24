@@ -5,7 +5,7 @@
 var consentServices = angular.module('consentApp')
 .factory('Procedures', ['$resource',
   function($resource){
-    return $resource('http://localhost:8080/api-1/procedures/?format=json', {}, {
+    return $resource('http://localhost:8080/api-1/procedures/?q=:query&format=json', {}, {
       query: {method:'GET', isArray:true}
     });
   }])

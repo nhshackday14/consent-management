@@ -2,7 +2,11 @@ angular.module('consentApp', ['ngRoute', 'ngResource'])
 
 .config(function($routeProvider, $locationProvider) {
   $routeProvider
-   .when('/search', {
+  .when('/', {
+    templateUrl: 'templates/search.html',
+    controller: 'SearchController'
+  })
+  .when('/search/:query', {
     templateUrl: 'templates/searchResults.html',
     controller: 'SearchResultsController'
   }).when('/consent_form/:id', {
