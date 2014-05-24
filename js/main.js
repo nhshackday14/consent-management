@@ -1,3 +1,7 @@
-define(function(){
-    alert('test');
+define([
+    'application'
+], function(App){
+
+    App.start();
+    
 });
