@@ -2,10 +2,6 @@ from django.db import models
 
 
 class ConsentForm(models.Model):
-    procedure_name = models.CharField(
-        max_length=255, blank=False, unique=True,
-        help_text="Name of proposed procedure or course of treatment"
-    )
     alternative_names = models.TextField(
         blank=True,
         help_text="The proposed procedure. New lines delimiter"
