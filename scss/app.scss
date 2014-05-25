@@ -38,3 +38,24 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+
+#main-content{
+    margin-top: 20px;
+}
+
+.search {
+    text-align: center;
+}
+
+.search-results {
+    li a {
+        display: block;
+        margin: 5px 0;
+        padding: 10px;
+        background-color: #eaf4fa;
+    }
+}
+.label {
+    margin: 5px 0;
+}

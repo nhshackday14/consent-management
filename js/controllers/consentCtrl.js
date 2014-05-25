@@ -11,6 +11,7 @@ angular.module('consentApp')
 }])
 .controller('SearchResultsController',['$scope', '$routeParams', 'Procedures',
    function($scope, $routeParams, Procedures) {
+    $scope.query = $routeParams.query;
     $scope.procedures = Procedures.query({query: $routeParams.query});
 }])
 .controller('ConsentFormController',['$scope', '$routeParams', 'ConsentForm',

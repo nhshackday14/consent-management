@@ -1,4 +1,32 @@
-<div>
-    {{consentForm.name}}
-    {{consentForm.consent_form.alternative_names}}
+<div class="row">
+    <div class="small-12 medium-6 large-6 large-centered medium-centered columns">
+        <nav class="breadcrumbs">
+          <a href="#/">Search</a>
+          <a class="current" href="#">{{consentForm.name}}</a>
+        </nav>
+        <div class="label">Name</div>
+        <div class="panel radius">
+            {{consentForm.name}}
+        </div>
+
+        <div class="label">Alternative Names</div>
+        <div class="panel radius">
+            {{consentForm.consent_form.alternative_names}}
+        </div>
+
+        <div class="label">Explanation</div>
+        <div class="panel radius">
+            {{consentForm.consent_form.explanation}}
+        </div>
+
+        <div class="label">Serious Risks</div>
+        <div class="panel radius">
+            {{consentForm.consent_form.serious_risks}}
+        </div>
+        
+        <div class="label">Frequent Risks</div>
+        <div class="panel radius">
+            {{consentForm.consent_form.frequent_risks}}
+        </div>
+    </div>
 </div>

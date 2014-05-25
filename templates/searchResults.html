@@ -1,5 +1,13 @@
-<ul id="search-results">
-    <li ng-repeat="procedure in procedures">
-        <a ng-class="{selected: location.path() == '/consent_form/{{procedure.consent_form.id}}'}" href="#/consent_form/{{procedure.consent_form.id}}">{{procedure.name}}</a>
-    </li>
-</ul>
+<div class="row">
+    <div class="small-12 medium-6 large-6 large-centered medium-centered columns">
+        <nav class="breadcrumbs">
+          <a href="#/">Search</a>
+          <a class="current" href="#">{{query}}</a>
+        </nav>
+        <ul class="search-results no-bullet">
+            <li ng-repeat="procedure in procedures">
+                <a ng-class="{selected: location.path() == '/consent_form/{{procedure.consent_form.id}}'}" href="#/consent_form/{{procedure.consent_form.id}}">{{procedure.name}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
