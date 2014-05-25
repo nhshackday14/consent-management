@@ -1,4 +1,4 @@
-angular.module('consentApp').directive('typeahead', function() {
+angular.module('consentApp').directive('typeahead', ['$rootScope','$location', function($rootScope, $location) {
   return {
     restrict: 'A',
     link: function(scope, element, attrs) {
@@ -15,10 +15,13 @@ angular.module('consentApp').directive('typeahead', function() {
         displayKey: 'name'
       });
 
-      element.on('typeahead:selected', function() {
+      element.on('typeahead:selected', function(e, model) {
         element.val($(this).val());
         scope.text = $(this).val();
+        $rootScope.$apply(function() {
+          $location.path('consent-form/' + model.id);
+        });
       });
     }
   };
-});
+}]);
