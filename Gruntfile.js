@@ -13,16 +13,22 @@ module.exports = function (grunt) {
       }
     },
     sass: {
+      options: {
+        includePaths: ['bower_components/foundation/scss']
+      },
       dist: {
+        options: {
+          outputStyle: 'compressed'
+        },
         files: {
-          'styles/main.css': 'styles/main.scss'
-        }
+          'css/app.css': 'scss/app.scss'
+        }        
       }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-requirejs');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
 
   grunt.registerTask('default', ['sass']);
 
