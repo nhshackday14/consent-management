@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" ng-switch on="consentFormExists">
     <div class="small-12 medium-6 large-6 large-centered medium-centered columns">
         <nav class="breadcrumbs">
           <a href="#/">Search</a>
@@ -8,25 +8,31 @@
         <div class="panel radius">
             {{consentForm.name}}
         </div>
+        <div ng-switch-when="true">
+            <div class="label">Alternative Names</div>
+            <div class="panel radius">
+                {{consentForm.consent_form.alternative_names}}
+            </div>
 
-        <div class="label">Alternative Names</div>
-        <div class="panel radius">
-            {{consentForm.consent_form.alternative_names}}
-        </div>
+            <div class="label">Explanation</div>
+            <div class="panel radius">
+                {{consentForm.consent_form.explanation}}
+            </div>
 
-        <div class="label">Explanation</div>
-        <div class="panel radius">
-            {{consentForm.consent_form.explanation}}
+            <div class="label">Serious Risks</div>
+            <div class="panel radius">
+                {{consentForm.consent_form.serious_risks}}
+            </div>
+            
+            <div class="label">Frequent Risks</div>
+            <div class="panel radius">
+                {{consentForm.consent_form.frequent_risks}}
+            </div>
         </div>
-
-        <div class="label">Serious Risks</div>
-        <div class="panel radius">
-            {{consentForm.consent_form.serious_risks}}
-        </div>
-        
-        <div class="label">Frequent Risks</div>
-        <div class="panel radius">
-            {{consentForm.consent_form.frequent_risks}}
+        <div ng-switch-default>
+            <div class="panel callout radius">
+                There is no submitted consent form for this procedure.
+            </div>
         </div>
     </div>
 </div>

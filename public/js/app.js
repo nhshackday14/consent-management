@@ -9,7 +9,8 @@ angular.module('consentApp', ['ngRoute', 'ngResource'])
   .when('/search/:query', {
     templateUrl: 'templates/searchResults.html',
     controller: 'SearchResultsController'
-  }).when('/consent_form/:id', {
+  })
+  .when('/consent-form/:id', {
     templateUrl: 'templates/consentForm.html',
     controller: 'ConsentFormController'
   });

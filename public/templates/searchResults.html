@@ -6,7 +6,7 @@
         </nav>
         <ul class="search-results no-bullet">
             <li ng-repeat="procedure in procedures">
-                <a ng-class="{selected: location.path() == '/consent_form/{{procedure.consent_form.id}}'}" href="#/consent_form/{{procedure.consent_form.id}}">{{procedure.name}}</a>
+                <a ng-class="{selected: location.path() == '/consent-form/{{procedure.id}}'}" href="#/consent-form/{{procedure.id}}">{{procedure.name}}</a>
             </li>
         </ul>
     </div>

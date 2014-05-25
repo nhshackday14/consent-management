@@ -16,5 +16,8 @@ angular.module('consentApp')
 }])
 .controller('ConsentFormController',['$scope', '$routeParams', 'ConsentForm',
    function($scope, $routeParams, ConsentForm) {
-    $scope.consentForm = ConsentForm.query({id: $routeParams.id});
+    var consentForm = ConsentForm.query({id: $routeParams.id}, function() {
+      $scope.consentForm = consentForm;
+      $scope.consentFormExists = consentForm.consent_form === null ? "false" : "true";
+    });
 }]);
