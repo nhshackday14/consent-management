@@ -13,4 +13,3 @@ class ProcedureSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.Procedure
-        fields = ('name', 'consent_form', 'extra_procedures')
