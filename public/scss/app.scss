@@ -44,12 +44,39 @@ body {
     background-size: 420px 420px;
 }
 
+.twitter-typeahead {
+    width: 100%;
+    input {
+        margin-bottom: 0;
+    }
+    .tt-dropdown-menu{
+        background: white;
+        z-index: 1000;
+    }
+
+    .tt-suggestion {
+        background: #d7e0ed;
+        padding: 10px;
+        p {
+            margin: 0;
+        }
+    }
+    .tt-suggestion:nth-child(even){
+        background: #eff2f8;
+    }
+}
+
+
+
 #main-content{
     margin-top: 20px;
 }
 
 .search {
     text-align: center;
+    .button {
+        margin-top: 20px;
+    }
 }
 
 .search-results {
