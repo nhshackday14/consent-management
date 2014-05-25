@@ -19,6 +19,11 @@ Run server:
     python manage.py runserver 8080
 ```
 
+Frontend:
+```
+    http://localhost:8000/static/index.html
+```
+
 Access Django admin:
     localhost:8080/admin
 

@@ -7,7 +7,7 @@ DEFAULT_PROCEDURE_FILE = "../ICT_data/procedures.txt"
 
 def parse_row(row):
     fields = row.split(" ", 1)
-    return Procedure(name=fields[1])
+    return Procedure(name=fields[1], ICD9_code=fields[0])
 
 
 def read_file(fname=DEFAULT_PROCEDURE_FILE):

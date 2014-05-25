@@ -1,5 +1,26 @@
 from django.contrib import admin
-from consent_management import models
+from django import forms
+from django.contrib.admin.widgets import FilteredSelectMultiple
 
-admin.site.register(models.Procedure)
-admin.site.register(models.ConsentForm)
+from consent_management.models import Procedure, ConsentForm
+
+
+class ProcedureFormAdmin(forms.ModelForm):
+
+    extra_procedures = forms.ModelMultipleChoiceField(
+        queryset=Procedure.objects.all(),
+        widget=FilteredSelectMultiple(
+            "Other procedures that share this consent form",
+            is_stacked=False
+        )
+    )
+
+
+class ProcedureAdmin(admin.ModelAdmin):
+
+    form = ProcedureFormAdmin
+    search_fields = ['name']
+
+
+admin.site.register(Procedure, ProcedureAdmin)
+admin.site.register(ConsentForm)

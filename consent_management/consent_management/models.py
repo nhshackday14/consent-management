@@ -3,13 +3,16 @@ from django.db import models
 
 class ConsentForm(models.Model):
     explanation = models.TextField(help_text="")
-    serious_risks = models.TextField(help_text="")
-    frequent_risks = models.TextField(help_text="")
+    serious_risks = models.TextField()
+    frequent_risks = models.TextField()
+    intended_benefits = models.TextField()
+    other_info = models.TextField(blank=True)
+    references = models.TextField(blank=True)
+    patiant_info = models.TextField(blank=True)
 
     def __unicode__(self):
         procedures = ' | '.join(
-            self.procedures.all().values_list('name', flat=True))
-        # procedures = "123"
+            self.procedures.all().values_list('ICD9_code', flat=True))
         return u"ConsentForm for {}".format(procedures) if procedures \
             else u"Unused ConsentForm #{}".format(self.pk)
 
@@ -17,6 +20,10 @@ class ConsentForm(models.Model):
 class Procedure(models.Model):
     name = models.CharField(
         max_length=255, null=False, unique=True
+    )
+
+    ICD9_code = models.CharField(
+        max_length=4, null=False, unique=True
     )
 
     consent_form = models.ForeignKey(
@@ -38,4 +45,4 @@ class Procedure(models.Model):
         return self.alternative_names.split('\n')
 
     def __unicode__(self):
-        return self.name
+        return "#{} {}".format(self.ICD9_code, self.name)
