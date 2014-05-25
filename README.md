@@ -6,6 +6,7 @@ Install:
 ```
     pip install -r requirements.txt
     python manage.py syncdb
+    python manage.py IC10_data_import
     npm install -g grunt-cli
     npm install -g bower
     npm install
