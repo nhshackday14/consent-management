@@ -39,6 +39,10 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
+body {
+    background: url('../images/clean_textile.png') repeat;
+    background-size: 420px 420px;
+}
 
 #main-content{
     margin-top: 20px;
@@ -58,4 +62,10 @@
 }
 .label {
     margin: 5px 0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    body{
+        background-image: url('../images/clean_textile_@2X.png');
+    }
 }
