@@ -6,6 +6,11 @@ Install:
 ```
     pip install -r requirements.txt
     python manage.py syncdb
+    npm install -g grunt-cli
+    npm install -g bower
+    npm install
+    bower install
+    grunt
 ```
 
 Run server:
