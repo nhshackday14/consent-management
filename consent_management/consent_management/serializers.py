@@ -18,7 +18,7 @@ class ProcedureSerializer(ModelSerializer):
             if obj.alternative_names else []
 
     def get_verbose_extra_procedures(self, obj):
-        return obj.extra_procedures.all().values_list('name', flat=True)
+        return obj.extra_procedures.all().values('name', 'id',)
 
     class Meta:
         model = models.Procedure
