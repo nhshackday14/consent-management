@@ -12,7 +12,8 @@ class ProcedureFormAdmin(forms.ModelForm):
         widget=FilteredSelectMultiple(
             "Other procedures that share this consent form",
             is_stacked=False
-        )
+        ),
+        required=False,
     )
 
 
