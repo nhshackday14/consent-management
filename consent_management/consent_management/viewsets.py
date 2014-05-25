@@ -9,6 +9,7 @@ from consent_management.serializers import (
 
 from consent_management.models import Procedure
 
+
 class ProcedureViewSet(viewsets.ReadOnlyModelViewSet):
     """
     API endpoint that allows projects to be viewed.
@@ -21,8 +22,7 @@ class ProcedureViewSet(viewsets.ReadOnlyModelViewSet):
         queryset = Procedure.objects.all()
         if query_params:
             Q1 = Q(name__contains=query_params)
-            Q2 = Q(consent_form__alternative_names__contains=query_params)
+            Q2 = Q(alternative_names__contains=query_params)
             queryset = queryset.filter(Q1 | Q2)
         serializer = self.serializer_class(queryset, many=True)
         return Response(serializer.data)
-
