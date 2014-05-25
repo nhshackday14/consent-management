@@ -11,11 +11,19 @@ module.exports = function (grunt) {
           optimize: 'uglify2'
         }
       }
+    },
+    sass: {
+      dist: {
+        files: {
+          'styles/main.css': 'styles/main.scss'
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-requirejs');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
-  grunt.registerTask('default', ['requirejs']);
+  grunt.registerTask('default', ['sass']);
 
 };
