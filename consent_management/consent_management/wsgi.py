@@ -15,8 +15,12 @@ MAIN_DIR_NAME = "consent_management"
 site_dir = '/home/%s/.virtualenvs/consent-management/lib/python2.7/site-packages' % USER
 sys_dir = '/home/%s/%s/%s' % (USER, PROJECT_NAME, MAIN_DIR_NAME)
 
-activate_this = '/home/ubuntu/.virtualenvs/consent-management/bin/activate_this.py'
-execfile(activate_this, dict(__file__=activate_this))
+# Just to make it work on our dev machines
+try:
+    activate_this = '/home/ubuntu/.virtualenvs/consent-management/bin/activate_this.py'
+    execfile(activate_this, dict(__file__=activate_this))
+except:
+    pass
 
 #site.addsitedir(site_dir)
 sys.path.insert(0, "/home/ubuntu/consent-management/consent_management")
