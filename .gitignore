@@ -22,6 +22,9 @@ var/
 .installed.cfg
 *.egg
 
+# DB settings
+db_settings.py
+
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt

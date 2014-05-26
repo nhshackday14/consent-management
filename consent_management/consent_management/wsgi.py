@@ -18,9 +18,6 @@ sys_dir = '/home/%s/%s/%s' % (USER, PROJECT_NAME, MAIN_DIR_NAME)
 activate_this = '/home/ubuntu/.virtualenvs/consent-management/bin/activate_this.py'
 execfile(activate_this, dict(__file__=activate_this))
 
-print site_dir
-print sys_dir
-
 #site.addsitedir(site_dir)
 sys.path.insert(0, "/home/ubuntu/consent-management/consent_management")
 settings_module = basename(dirname(__file__)) + '.settings'
