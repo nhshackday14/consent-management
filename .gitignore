@@ -24,6 +24,7 @@ var/
 
 # DB settings
 db_settings.py
+server_settings.py
 
 # Installer logs
 pip-log.txt
@@ -61,3 +62,6 @@ docs/_build/
 node_modules/
 bower_components/
 .sass-cache/
+
+# Static
+collectstatic/
