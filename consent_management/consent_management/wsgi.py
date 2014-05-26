@@ -1,14 +1,33 @@
-"""
-WSGI config for consent_management project.
+import sys
+import site
+from os.path import basename, dirname
+from os import environ
 
-It exposes the WSGI callable as a module-level variable named ``application``.
+# Apply WSGI middleware here.
+# from helloworld.wsgi import HelloWorldApplication
+# application = HelloWorldApplication(application)
 
-For more information on this file, see
-https://docs.djangoproject.com/en/1.6/howto/deployment/wsgi/
-"""
 
-import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "consent_management.settings")
+USER = "ubuntu"
+PROJECT_NAME = "consent-management"
+MAIN_DIR_NAME = "consent_management"
 
-from django.core.wsgi import get_wsgi_application
-application = get_wsgi_application()
+site_dir = '/home/%s/.virtualenvs/consent-management/lib/python2.7/site-packages' % USER
+sys_dir = '/home/%s/%s/%s' % (USER, PROJECT_NAME, MAIN_DIR_NAME)
+
+activate_this = '/home/ubuntu/.virtualenvs/consent-management/bin/activate_this.py'
+execfile(activate_this, dict(__file__=activate_this))
+
+print site_dir
+print sys_dir
+
+#site.addsitedir(site_dir)
+sys.path.insert(0, "/home/ubuntu/consent-management/consent_management")
+settings_module = basename(dirname(__file__)) + '.settings'
+
+
+
+environ['DJANGO_SETTINGS_MODULE'] = 'consent_management.settings'
+
+import django.core.handlers.wsgi
+application = django.core.handlers.wsgi.WSGIHandler()
