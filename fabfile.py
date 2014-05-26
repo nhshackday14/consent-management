@@ -10,7 +10,7 @@ env.user = "ubuntu"
 def rsync_to_prod():
     rsync_settings = {"remote_dir": "/home/ubuntu"}
     rsync_settings["delete"] = True
-    rsync_settings["exclude"] = ["*.pyc", "*.git", "fabfile.pyi", "*.pdf"]
+    rsync_settings["exclude"] = ["*.pyc", "*.git", "fabfile.py", "*.pdf", "db.sqlite3"]
     rsync_project(**rsync_settings)
 
 

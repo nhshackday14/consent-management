@@ -57,12 +57,17 @@ WSGI_APPLICATION = 'consent_management.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
+else:
+    from . import db_settings
+    DATABASES = db_settings.DATABASES
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
