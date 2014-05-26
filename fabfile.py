@@ -15,7 +15,7 @@ def rsync_to_prod():
 
 
 def install_bower():
-    with cd("consentmanagement"):
+    with cd("consent-management"):
         run("npm install")
         run("bower install")
 
