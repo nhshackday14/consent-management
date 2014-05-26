@@ -10,7 +10,8 @@ env.user = "ubuntu"
 def rsync_to_prod():
     rsync_settings = {"remote_dir": "/home/ubuntu"}
     rsync_settings["delete"] = True
-    rsync_settings["exclude"] = ["*.pyc", "*.git", "fabfile.py", "*.pdf", "db.sqlite3"]
+    rsync_settings["exclude"] = ["*.pyc", "*.git",
+                                 "fabfile.py", "*.pdf", "db.sqlite3"]
     rsync_project(**rsync_settings)
 
 
@@ -19,9 +20,12 @@ def install_bower():
         run("npm install")
         run("bower install")
 
+
 def upload_settings():
-    with cd("consent-management/consent-management"):
-        put('../server_settings.py')
+    put(
+        remote_path='consent-management/consent_management',
+        local_path="../server_settings.py"
+    )
 
 
 def collect_static():
