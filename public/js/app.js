@@ -3,15 +3,15 @@ angular.module('consentApp', ['ngRoute', 'ngResource'])
 .config(function($routeProvider, $locationProvider) {
   $routeProvider
   .when('/', {
-    templateUrl: 'templates/search.html',
+    templateUrl: '/static/templates/search.html',
     controller: 'SearchController'
   })
   .when('/search/:query', {
-    templateUrl: 'templates/searchResults.html',
+    templateUrl: '/static/templates/searchResults.html',
     controller: 'SearchResultsController'
   })
   .when('/consent-form/:id', {
-    templateUrl: 'templates/consentForm.html',
+    templateUrl: '/static/templates/consentForm.html',
     controller: 'ConsentFormController'
   });
 
