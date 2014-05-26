@@ -11,16 +11,20 @@
 
         <div class="label">Extra Procedures</div>
         <div class="panel radius">
-            <span ng-repeat="procedure in consentForm.extra_procedures">
-                <a ng-class="{selected: location.path() == '/consent-form/{{procedure.id}}'}" href="#/consent-form/{{procedure.id}}">{{procedure.name}}</a>&nbsp;
-            </span>
+            <ul ng-show="consentForm.extra_procedures.length" class="side-nav">
+                <li ng-repeat="procedure in consentForm.extra_procedures">
+                    <a ng-class="{selected: location.path() == '/consent-form/{{procedure.id}}'}" href="#/consent-form/{{procedure.id}}">
+                        {{procedure.name}}
+                    </a>
+                </li>
+            </ul>
         </div>
         <div ng-switch-when="true">
 
             <div class="label">Alternative Names</div>
             <div class="panel radius">
                 <span ng-repeat="name in consentForm.alternative_names">
-                    {{name}},&nbsp;
+                    {{name}}{{$last ? '' : ', '}}
                 </span>
             </div>
 
