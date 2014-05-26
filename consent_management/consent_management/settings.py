@@ -24,9 +24,6 @@ DEBUG = False
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = ["http://ec2-54-247-69-211.eu-west-1.compute.amazonaws.com"]
-
-
 # Application definition
 
 INSTALLED_APPS = (

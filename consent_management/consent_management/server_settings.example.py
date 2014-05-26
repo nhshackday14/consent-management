@@ -1,5 +1,4 @@
 DEBUG = False
-ALLOWED_HOSTS = (
-    'localhost',
-)
-SECRET_KEY = '8$6__o!od5vv+h2*rfg=fxykw3+j*7hc_bx1m3*14x&3$_w0kd'
+SECRET_KEY = 'example'
+ALLOWED_HOSTS = ["http://ec2-54-247-69-211.eu-west-1.compute.amazonaws.com"]
+DATABASES = {}
