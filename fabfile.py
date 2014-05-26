@@ -1,7 +1,7 @@
 from fabric.api import env, lcd, run, local
 from fabric.contrib.project import rsync_project
-from fabric.contrib.files import sed
 from fabric.context_managers import cd
+from fabric.operations import put
 env.key_filename = "../../nother.pem"
 env.hosts = ["54.247.69.211"]
 env.user = "ubuntu"
@@ -18,8 +18,10 @@ def install_bower():
     with cd("consent-management"):
         run("npm install")
         run("bower install")
-        with cd("consent-management"):
-            sed("settings.py", "DEBUG = True", "DEBUG = False")
+
+def upload_settings():
+    with cd("consent-management/consent-management"):
+        put('../server_settings.py')
 
 
 def collect_static():
@@ -30,4 +32,5 @@ def collect_static():
 def push_to_prod():
     collect_static()
     rsync_to_prod()
+    upload_settings()
     install_bower()

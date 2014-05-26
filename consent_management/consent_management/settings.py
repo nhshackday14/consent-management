@@ -16,16 +16,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '8$6__o!od5vv+h2*rfg=fxykw3+j*7hc_bx1m3*14x&3$_w0kd'
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
-
-ALLOWED_HOSTS = ["ec2-54-247-69-211.eu-west-1.compute.amazonaws.com"]
-
 
 # Application definition
 
@@ -57,16 +51,12 @@ WSGI_APPLICATION = 'consent_management.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
-if DEBUG:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-else:
-    from . import db_settings
-    DATABASES = db_settings.DATABASES
+}
 
 
 # Internationalization
@@ -96,3 +86,10 @@ STATICFILES_DIRS = (
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, '../public'),
 )
+
+STATIC_ROOT = os.path.join(BASE_DIR, '../collectstatic')
+
+try:
+    from server_settings import *
+except:
+    pass
