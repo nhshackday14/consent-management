@@ -34,7 +34,7 @@ def collect_static():
 
 
 def push_to_prod():
+    install_bower()
     collect_static()
     rsync_to_prod()
     upload_settings()
-    install_bower()
