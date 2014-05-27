@@ -12,7 +12,7 @@ class ConsentForm(models.Model):
 
     def __unicode__(self):
         procedures = ' | '.join(
-            self.procedures.all().values_list('ICD9_code', flat=True))
+            self.procedures.all().values_list('name', flat=True))
         return u"ConsentForm for {}".format(procedures) if procedures \
             else u"Unused ConsentForm #{}".format(self.pk)
 
