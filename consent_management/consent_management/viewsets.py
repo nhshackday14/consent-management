@@ -21,8 +21,8 @@ class ProcedureViewSet(viewsets.ReadOnlyModelViewSet):
         query_params = request.GET.get('q')
         queryset = Procedure.objects.all()
         if query_params:
-            Q1 = Q(name__contains=query_params)
-            Q2 = Q(alternative_names__contains=query_params)
+            Q1 = Q(name__icontains=query_params)
+            Q2 = Q(alternative_names__icontains=query_params)
             queryset = queryset.filter(Q1 | Q2)
         serializer = self.serializer_class(queryset, many=True)
         return Response(serializer.data)
