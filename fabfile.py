@@ -15,10 +15,11 @@ def rsync_to_prod():
     rsync_project(**rsync_settings)
 
 
-def install_bower():
+def build_static():
     with cd("consent-management"):
         run("npm install")
         run("bower install")
+        run("grunt")
 
 
 def upload_settings():
@@ -34,7 +35,7 @@ def collect_static():
 
 
 def push_to_prod():
-    install_bower()
+    build_static()
     collect_static()
     rsync_to_prod()
     upload_settings()

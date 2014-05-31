@@ -20,7 +20,7 @@ Run server:
 
 Frontend:
 ```
-    http://localhost:8000/static/index.html
+    http://localhost:8080
 ```
 
 Access Django admin:

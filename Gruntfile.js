@@ -39,7 +39,8 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('default', ['sass']);
+  grunt.registerTask('default', ['concat_js']);
   grunt.registerTask('concat_js', ['concat']);
+  grunt.registerTask('compile_styles', ['sass']);
 
 };
