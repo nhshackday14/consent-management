@@ -6,6 +6,9 @@ angular.module('consentApp', ['ngRoute', 'ngResource'])
     templateUrl: '/static/templates/search.html',
     controller: 'SearchController'
   })
+  .when('/about', {
+    templateUrl: '/static/templates/about.html'
+  })
   .when('/search/:query', {
     templateUrl: '/static/templates/searchResults.html',
     controller: 'SearchResultsController'
