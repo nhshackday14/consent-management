@@ -23,6 +23,7 @@
             <div ng-view></div>
         </div>
 
+        {% if debug %}
         <script src="/static/bower_components/jquery/dist/jquery.min.js"></script>
         <script src="/static/bower_components/typeahead.js/dist/typeahead.bundle.js"></script>
         <script src="/static/bower_components/fastclick/lib/fastclick.js"></script>
@@ -36,5 +37,8 @@
         <script src="/static/js/directives/consentDrv.js"></script>
         <script src="/static/js/controllers/consentCtrl.js"></script>
         <script src="/static/js/foundation.js"></script>
+        {% else %}
+        <script src="/static/js/main.js"></script>        
+        {% endif %}
     </body>
 </html>

@@ -23,7 +23,7 @@ def install_bower():
 
 def upload_settings():
     put(
-        remote_path='consent-management/consent_management',
+        remote_path='consent-management/consent_management/consent_management',
         local_path="../server_settings.py"
     )
 

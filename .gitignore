@@ -62,6 +62,8 @@ docs/_build/
 node_modules/
 bower_components/
 .sass-cache/
+public/js/main.js
 
 # Static
 collectstatic/
+
