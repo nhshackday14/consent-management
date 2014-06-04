@@ -17,9 +17,9 @@ def rsync_to_prod():
 
 def build_static():
     with cd("consent-management"):
-        run("npm install")
-        run("bower install")
-        run("grunt")
+        local("npm install")
+        local("bower install")
+        local("grunt")
 
 
 def upload_settings():

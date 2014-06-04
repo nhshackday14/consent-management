@@ -27,7 +27,7 @@ module.exports = function (grunt) {
                 "public/bower_components/modernizr/modernizr.js",
                 "public/bower_components/angular/angular.min.js",
                 "public/bower_components/angular-route/angular-route.min.js",
-                "public/bower_components/angular-resource/angular-resource.js",
+                "public/bower_components/angular-resource/angular-resource.min.js",
                 "public/js/app.js",
                 "public/js/services/consentSrv.js",
                 "public/js/directives/consentDrv.js",
@@ -39,7 +39,7 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('default', ['concat_js']);
+  grunt.registerTask('default', ['concat_js', 'sass']);
   grunt.registerTask('concat_js', ['concat']);
   grunt.registerTask('compile_styles', ['sass']);
 
