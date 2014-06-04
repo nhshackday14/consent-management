@@ -1,6 +1,6 @@
 module.exports = function (grunt) {
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-sass');
 
   grunt.initConfig({
     sass: {
@@ -39,7 +39,7 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('default', ['concat_js', 'sass']);
+  grunt.registerTask('default', ['concat', 'sass']);
   grunt.registerTask('concat_js', ['concat']);
   grunt.registerTask('compile_styles', ['sass']);
 
