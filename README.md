@@ -18,6 +18,7 @@ System dependencies:
 ```
     pip install -r requirements.txt
     python manage.py syncdb
+    python manage.py migrate
     npm install -g grunt-cli
     npm install -g bower
     npm install
@@ -46,4 +47,4 @@ API
 * http://localhost:8080/api-1/procedures
 * http://localhost:8080/api-1/procedures/1
 * http://localhost:8080/api-1/procedures/?q=awef
-    
+
