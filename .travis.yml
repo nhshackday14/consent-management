@@ -6,7 +6,7 @@ python:
 # command to install system dependecies
 before_install:
   - "sudo apt-get update -qq"
-  - "sudo apt-get -y install nodejs"
+  - "sudo apt-get -y install nodejs npm"
   - "sudo npm install -g grunt-cli"
   - "sudo npm install -g bower"
 
