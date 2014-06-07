@@ -8,17 +8,6 @@
         <div class="panel radius">
             {{consentForm.name}}
         </div>
-
-        <div class="label">Extra Procedures</div>
-        <div class="panel radius">
-            <ul ng-show="consentForm.extra_procedures.length" class="side-nav">
-                <li ng-repeat="procedure in consentForm.extra_procedures">
-                    <a ng-class="{selected: location.path() == '/consent-form/{{procedure.id}}'}" href="#/consent-form/{{procedure.id}}">
-                        {{procedure.name}}
-                    </a>
-                </li>
-            </ul>
-        </div>
         <div ng-switch-when="true">
 
             <div class="label">Alternative Names</div>
@@ -32,6 +21,11 @@
             <div class="panel radius">
                 {{consentForm.consent_form.explanation}}
             </div>
+            
+            <div class="label">Intended Benefits</div>
+            <div class="panel radius">
+                {{consentForm.consent_form.intended_benefits}}
+            </div>
 
             <div class="label">Serious Risks</div>
             <div class="panel radius">
@@ -42,10 +36,16 @@
             <div class="panel radius">
                 {{consentForm.consent_form.frequent_risks}}
             </div>
-            
-            <div class="label">Intended Benefits</div>
+
+            <div class="label">Extra Procedures That May Become Necessary</div>
             <div class="panel radius">
-                {{consentForm.consent_form.intended_benefits}}
+                <ul ng-show="consentForm.extra_procedures.length" class="side-nav">
+                    <li ng-repeat="procedure in consentForm.extra_procedures">
+                        <a ng-class="{selected: location.path() == '/consent-form/{{procedure.id}}'}" href="#/consent-form/{{procedure.id}}">
+                            {{procedure.name}}
+                        </a>
+                    </li>
+                </ul>
             </div>
             
             <div class="label">Other Info</div>
