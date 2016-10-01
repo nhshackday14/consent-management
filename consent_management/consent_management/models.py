@@ -19,12 +19,15 @@ class ProcedureDetails(models.Model):
 
 
 class GlobalInfo(models.Model):
-    consultant_name = models.TextField()
-    maps_id = models.CharField(default="ChIJz3g54adeeUgRMRGZkTY7BKk",max_length=32)
-    how_to_get_there = models.TextField()
+    consultant_name = models.CharField(null=True, blank=True, max_length=256)
+    maps_id = models.CharField(
+        default="ChIJz3g54adeeUgRMRGZkTY7BKk", max_length=32,
+        null=True, blank=True
+    )
+    how_to_get_there = models.TextField(null=True, blank=True)
 
     def __unicode__(self):
-        return "#{} {} {}".format(self.consultant_name, self.maps_id,self.video_url)
+        return "#{} {}".format(self.consultant_name, self.maps_id)
 
 class Procedure(models.Model):
 
