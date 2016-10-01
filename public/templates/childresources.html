@@ -4,15 +4,17 @@
         <nav class="breadcrumbs">
           <a href="#/">Back to the start</a>
           <a href="#">{{consentForm.name}}</a>
-          <a class="current" href="#">Your Information</a>
+          <a class="current" href="#">Child resources</a>
         </nav>
 
         <div ng-switch-when="true">
 
-            <a href=''><div class="label">Preparation</div></a>
-            <a href=''><div class="label">At the Hospital</div></a>
-            <a href=''><div class="label">At Home</div></a>
-            <a href=''><div class="label">How to Find us</div></a>
+            <a href=''><div class="label">People I will meet</div></a>
+            <p class='content'>{{peopletomeet}}</p>
+            <a href=''><div class="label">Nurse</div></a>
+            <p class='content'>{{nurse}}</p>
+            <a href=''><div class="label">Places I will go</div></a>
+            <p class='content'>{{placesforchild}}</p>
 
         </div>
         <div ng-switch-default>

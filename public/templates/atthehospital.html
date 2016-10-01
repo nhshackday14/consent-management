@@ -4,15 +4,18 @@
         <nav class="breadcrumbs">
           <a href="#/">Back to the start</a>
           <a href="#">{{consentForm.name}}</a>
-          <a class="current" href="#">Your Information</a>
+          <a class="current" href="#">At the hospital</a>
         </nav>
 
         <div ng-switch-when="true">
 
-            <a href=''><div class="label">Preparation</div></a>
-            <a href=''><div class="label">At the Hospital</div></a>
-            <a href=''><div class="label">At Home</div></a>
-            <a href=''><div class="label">How to Find us</div></a>
+            <a href=''><div class="label">Anaesthetic</div></a>
+            <p class='content'>{{anaesthetic}}</p>
+            <a href=''><div class="label">Surgery</div></a>
+            <p class='content'>{{surgery}}</p>
+            <a href=''><div class="label">Recovery immediately after the operation</div></a>
+            <p class='content'>{{recovery}}</p>
+            <a href=''><div class="importantlink">Child resources</div></a>
 
         </div>
         <div ng-switch-default>
