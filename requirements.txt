@@ -1,4 +1,5 @@
 Django==1.6.5
-djangorestframework==2.3.13
-wsgiref==0.1.2
 South==0.8.4
+djangorestframework==2.3.13
+gunicorn==19.6.0
+wsgiref==0.1.2
