@@ -1,23 +1,33 @@
 from django.db import models
 
 
-class ConsentForm(models.Model):
-    explanation = models.TextField(help_text="")
-    serious_risks = models.TextField()
-    frequent_risks = models.TextField()
-    intended_benefits = models.TextField()
-    other_info = models.TextField(blank=True)
-    references = models.TextField(blank=True)
-    patiant_info = models.TextField(blank=True)
+class ProcedureDetails(models.Model):
+
+    name = models.CharField(max_length=255)
+    anaesthesia = models.TextField()
+    explanation = models.TextField()
+    recovery = models.TextField()
+    follow_up = models.TextField()
+    after_care = models.TextField()
 
     def __unicode__(self):
         procedures = ' | '.join(
-            self.procedures.all().values_list('name', flat=True))
-        return u"ConsentForm for {}".format(procedures) if procedures \
-            else u"Unused ConsentForm #{}".format(self.pk)
+            self.procedure_details.all().values_list('name', flat=True))
+        return u"Procedure details for {}".format(procedures) if procedures \
+            else u"Unused procedure details #{}".format(self.pk)
 
+
+class GlobalInfo(models.Model):
+
+    consultant_name = models.TextField()
+    maps_id = models.CharField(default="ChIJz3g54adeeUgRMRGZkTY7BKk",max_length=32)
+    video_url = models.URLField()
+
+    def __unicode__(self):
+        return "#{} {} {}".format(self.consultant_name, self.maps_id,self.video_url)
 
 class Procedure(models.Model):
+
     name = models.CharField(
         max_length=255, null=False, unique=True
     )
@@ -27,8 +37,8 @@ class Procedure(models.Model):
     )
 
     consent_form = models.ForeignKey(
-        ConsentForm,
-        related_name="procedures",
+        ProcedureDetails,
+        related_name="procedure_details",
         null=True,
         blank=True,
     )
