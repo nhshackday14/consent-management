@@ -2,7 +2,7 @@ from django.contrib import admin
 from django import forms
 from django.contrib.admin.widgets import FilteredSelectMultiple
 
-from consent_management.models import Procedure, ConsentForm
+from consent_management.models import Procedure, ProcedureDetails, GlobalInfo
 
 
 class ProcedureFormAdmin(forms.ModelForm):
@@ -24,4 +24,5 @@ class ProcedureAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Procedure, ProcedureAdmin)
-admin.site.register(ConsentForm)
+admin.site.register(ProcedureDetails)
+admin.site.register(GlobalInfo)
