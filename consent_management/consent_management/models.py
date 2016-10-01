@@ -4,13 +4,12 @@ from django.template.defaultfilters import slugify
 
 class ProcedureDetails(models.Model):
 
-    name = models.CharField(max_length=255)
-    anaesthesia = models.TextField()
-    explanation = models.TextField()
-    recovery = models.TextField()
-    follow_up = models.TextField()
-    after_care = models.TextField()
-    video_url = models.URLField()
+    anaesthesia = models.TextField(null=True, blank=True)
+    explanation = models.TextField(null=True, blank=True)
+    recovery = models.TextField(null=True, blank=True)
+    follow_up = models.TextField(null=True, blank=True)
+    after_care = models.TextField(null=True, blank=True)
+    video_url = models.URLField(null=True, blank=True)
 
     def __unicode__(self):
         procedures = ' | '.join(
