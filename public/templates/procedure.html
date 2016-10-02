@@ -7,7 +7,16 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        {{ md|markdown }}
+        <h2>Anaesthesia</h2>
+        {{ object.consent_form.anaesthesia|markdown }}
+        <h2>Explanation</h2>
+        {{ object.consent_form.explanation|markdown }}
+        <h2>Recovery</h2>
+        {{ object.consent_form.recovery|markdown }}
+        <h2>Follow Up</h2>
+        {{ object.consent_form.follow_up|markdown }}
+        <h2>After Care</h2>
+        {{ object.consent_form.after_care|markdown }}
       </div>
     </div>
   </div>

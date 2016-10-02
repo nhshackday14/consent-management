@@ -55,7 +55,20 @@ Once your child is comfortable and eating and drinking, he or she will be able
 to go home. This is likely to be around three to four hours after the operation.
  However, if your child is under three months old, he or she will probably be
 kept in hospital overnight for monitoring.
+Your child will be monitored for a short while and then brought back to the
+ward to recover. He or she may be sleepy, and feel or be sick. It's possible
+that your child will be upset after the procedure. He or she will need to rest
+until the effects of the general anaesthetic have passed. Your child should be
+able to eat and drink soon after the operation.
 
+Once your child is comfortable and eating and drinking, he or she will be able
+to go home. This is likely to be around three to four hours after the operation.
+ However, if your child is under three months old, he or she will probably be
+kept in hospital overnight for monitoring.
+
+Your child's surgeon may prescribe antibiotics for a few days, although this is
+unusual. If your child is prescribed antibiotics, it's important that he or she
+finishes the course
 Your child's surgeon may prescribe antibiotics for a few days, although this is
 unusual. If your child is prescribed antibiotics, it's important that he or she
 finishes the course.
