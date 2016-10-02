@@ -1,4 +1,4 @@
-angular.module('consentApp').directive('typeahead', ['$rootScope','$location', function($rootScope, $location) {
+angular.module('consentApp').directive('typeahead', ['$rootScope','$location', 'slugify', function($rootScope, $location, slugify) {
   return {
     restrict: 'A',
     link: function(scope, element, attrs) {
@@ -19,7 +19,7 @@ angular.module('consentApp').directive('typeahead', ['$rootScope','$location', f
         element.val($(this).val());
         scope.text = $(this).val();
         $rootScope.$apply(function() {
-          $location.path('consent-form/' + model.id);
+          $location.path('procedure/' + slugify(scope.text));
         });
       });
     }

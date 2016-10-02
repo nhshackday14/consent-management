@@ -5,7 +5,7 @@ from consent_management import models
 
 class ConsentFormSerializer(ModelSerializer):
     class Meta:
-        model = models.ConsentForm
+        model = models.ProcedureDetails
 
 
 class ProcedureSerializer(ModelSerializer):

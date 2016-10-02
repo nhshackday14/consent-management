@@ -1,0 +1,23 @@
+{% load md2 %}
+<div style="height: 100px" class="gradient">
+  <img style="height: 100px; float: left; margin-top: 10px; margin-left: 50px" src="static/images/Leeds-Childrens-Hospital-Logo-White-01.png">
+  <h1 style="float: right; margin-right: 20px; color: white; font-size: 60px;">{{ object.name }}</h1>
+</div>
+<div class="max-size">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Anaesthesia</h2>
+        {{ object.consent_form.anaesthesia|markdown }}
+        <h2>Explanation</h2>
+        {{ object.consent_form.explanation|markdown }}
+        <h2>Recovery</h2>
+        {{ object.consent_form.recovery|markdown }}
+        <h2>Follow Up</h2>
+        {{ object.consent_form.follow_up|markdown }}
+        <h2>After Care</h2>
+        {{ object.consent_form.after_care|markdown }}
+      </div>
+    </div>
+  </div>
+</div>
