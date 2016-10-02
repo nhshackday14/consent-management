@@ -35,6 +35,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
     'south',
+    'django_markdown2',
     'consent_management',
 )
 
@@ -104,7 +105,7 @@ TEMPLATE_CONTEXT_PROCESSORS= (
     'django.core.context_processors.static',
     'django.core.context_processors.tz',
     'django.contrib.messages.context_processors.messages',
-    'consent_management.context_processors.global_info'
+    'consent_management.context_processors.global_info',
 )
 
 try:

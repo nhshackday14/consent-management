@@ -1,5 +1,7 @@
-@import "settings";
-@import "foundation";
+// @import "settings";
+$icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
+@import "bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
 
 // Or selectively include components
 // @import
@@ -44,7 +46,12 @@ $leeds_medium: #009888;
 $leeds_light: #9ad2ce;
 
 
-body {
+.max-size{
+  width: 100%;
+  height: 100%;
+}
+
+.gradient {
     // background: url('../images/clean_textile.png') repeat;
     background-size: 420px 420px;
     background: linear-gradient($leeds_medium, $leeds_light);

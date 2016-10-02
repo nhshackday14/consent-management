@@ -1,2 +1,14 @@
-hello
-{{ global_info.consultant_name }}
+{% load md2 %}
+<div style="height: 100px" class="gradient">
+  <img style="height: 100px; float: left; margin-top: 10px; margin-left: 50px" src="static/images/Leeds-Childrens-Hospital-Logo-White-01.png">
+  <h1 style="float: right; margin-right: 20px; color: white; font-size: 60px;">{{ object.name }}</h1>
+</div>
+<div class="max-size">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        {{ md|markdown }}
+      </div>
+    </div>
+  </div>
+</div>

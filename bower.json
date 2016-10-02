@@ -19,6 +19,7 @@
     "angular-route": "~1.2.16",
     "angular-resource": "~1.2.16",
     "foundation": "zurb/bower-foundation",
-    "typeahead.js": "~0.10.2"
+    "typeahead.js": "~0.10.2",
+    "bootstrap-sass": "^3.3.7"
   }
 }
