@@ -39,9 +39,15 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
+$nhs_blue: #0072ba;
+$leeds_medium: #009888;
+$leeds_light: #9ad2ce;
+
+
 body {
-    background: url('../images/clean_textile.png') repeat;
+    // background: url('../images/clean_textile.png') repeat;
     background-size: 420px 420px;
+    background: linear-gradient($leeds_medium, $leeds_light);
 }
 
 .twitter-typeahead {
@@ -103,6 +109,6 @@ body {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     body{
-        background-image: url('../images/clean_textile_@2X.png');
+        // background-image: url('../images/clean_textile_@2X.png');
     }
 }
