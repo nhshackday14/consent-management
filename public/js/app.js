@@ -13,7 +13,7 @@ angular.module('consentApp', ['ngRoute', 'ngResource'])
     templateUrl: '/static/templates/searchResults.html',
     controller: 'SearchResultsController'
   })
-  .when('/consent-form/:name', {
+  .when('/procedure/:name', {
     templateUrl: function(urlattr){
         return '/procedure/' + urlattr.name;
     },
